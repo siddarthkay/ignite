@@ -6,6 +6,7 @@ import { DemoTabScreenProps } from "../navigators/DemoNavigator"
 import { colors, spacing } from "../theme"
 import { isRTL } from "../i18n"
 import { useStores } from "../models"
+import { useNavigation } from "@react-navigation/native"
 
 /**
  * @param {string} url - The URL to open in the browser.
@@ -21,6 +22,8 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
   const {
     authenticationStore: { logout },
   } = useStores()
+
+  const navigation = useNavigation()
 
   const usingHermes = typeof HermesInternal === "object" && HermesInternal !== null
   // @ts-expect-error
@@ -106,6 +109,10 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
       <View style={$buttonContainer}>
         <Button style={$button} tx="demoDebugScreen.reactotron" onPress={demoReactotron} />
         <Text style={$hint} tx={`demoDebugScreen.${Platform.OS}ReactotronHint` as const} />
+      </View>
+      <View style={$buttonContainer}>
+        <Button style={$button} tx="demoDebugScreen.storyBook" onPress={()=>navigation.navigate('Storybook' as never)} />
+        <Text style={$hint} tx={`demoDebugScreen.${Platform.OS}StoryBookHint` as const} />
       </View>
       <View style={$buttonContainer}>
         <Button style={$button} tx="common.logOut" onPress={logout} />

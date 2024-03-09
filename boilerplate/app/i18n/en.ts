@@ -87,6 +87,17 @@ const en = {
     reportBugs: "Report Bugs",
     demoList: "Demo List",
     demoPodcastList: "Demo Podcast List",
+    storyBook: "StoryBook",
+    webStoryBookHint:
+      "Tap here to go into storybook mode, to come back just navigate back via your browser",
+    windowsStoryBookHint:
+      "Tap here to go into storybook mode, to come back just press the back button on your device OR Emulator",
+    macosStoryBookHint:
+      "Tap here to go into storybook mode, to come back just perform the swipe back gesture, i.e swipe right on Simulator",
+    iosStoryBookHint:
+      "Tap here to go into storybook mode, to come back just perform the swipe back gesture, i.e swipe right",
+    androidStoryBookHint:
+      "Tap here to go into storybook mode, to come back just press the back button on your device OR Emulator",
     androidReactotronHint:
       "If this doesn't work, ensure the Reactotron desktop app is running, run adb reverse tcp:9090 tcp:9090 from your terminal, and reload the app.",
     iosReactotronHint:
